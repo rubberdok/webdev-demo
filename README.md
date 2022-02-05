@@ -18,6 +18,7 @@
 Following these steps prepares you to join the interactive React demo of the crash course. This is not mandatory, but I recommend everyone to do it to maximize their learning.
 
 1. Download and install `Node.js` from https://nodejs.org/en/
+   - Select the "Recommended For Most Users" option
 2. Find the **terminal** on your computer
    - Mac: `Terminal`
    - Windows: `Powershell` / `Command Prompt` / `Windows Terminal`
