@@ -28,6 +28,7 @@ Following these steps prepares you to join the interactive React demo of the cra
    - `npx` this time, not `npm`!
    - If prompted to install `create-react-app`, type `y`.
    - This creates a React app called `react-demo`.
+   - If you're on a Mac, you may be prompted to install _Command Line Developer Tools_. Do it!
 5. Type `cd react-demo` to move to the new `react-demo` subfolder
 6. Type `npm start`
    - After some setup, this should open a browser tab with your app! Now you're all set for the interactive demo.
