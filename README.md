@@ -15,7 +15,7 @@
 
 ## Preparation
 
-Following these steps prepares you to join the interactive React demo of the crash course. This is not obligatory, but I recommend everyone to do it to maximize their learning.
+Following these steps prepares you to join the interactive React demo of the crash course. This is not mandatory, but I recommend everyone to do it to maximize their learning.
 
 1. Download and install `Node.js` from https://nodejs.org/en/
 2. Find the **terminal** on your computer
@@ -36,7 +36,7 @@ In addition, I recommend everyone to install **VSCode** as your code editor:
 1. Download and install from https://code.visualstudio.com/
 2. Launch it
 3. Go to `File -> Open Folder`
-4. Double click the `react-demo` folder. If you made it from a fresh terminal window earlier, it should be located in:
+4. Find the `react-demo` folder, and double-click it. If you made it from a fresh terminal window earlier, it should be located in:
    - Mac: `/Users/[your username]/react-demo` (press `Command + Shift + H` and you should see it)
    - Windows: `C:\Users\[your username]\react-demo`
 5. Now you should see your React app files on the left in VSCode. Next time you open VSCode, you'll enter right into this folder and be ready to join the demo!
