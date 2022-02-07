@@ -30,3 +30,23 @@ export async function postTodo(todo) {
 		return { ok: false, error: error.message };
 	}
 }
+
+export async function deleteTodo(todo) {
+	try {
+		const response = await fetch(`${url}/deleteTodo`, {
+			method: "POST",
+			body: JSON.stringify(todo),
+		});
+
+		if (response.status !== 200) {
+			const error = await response.text();
+			throw new Error(error);
+		}
+
+		const deletedTodo = await response.json();
+
+		return { ok: true, todo: deletedTodo };
+	} catch (error) {
+		return { ok: false, error: error.message };
+	}
+}

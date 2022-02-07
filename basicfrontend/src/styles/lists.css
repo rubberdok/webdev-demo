@@ -5,7 +5,14 @@ ul {
 }
 
 ul li {
-	padding: 10px;
-	background-color: #e0e0e0;
+	display: flex;
 	margin-top: 10px;
+}
+
+ul li p {
+	background-color: #e0e0e0;
+	margin: 0;
+	margin-right: 10px;
+	padding: 12px;
+	flex-grow: 1;
 }

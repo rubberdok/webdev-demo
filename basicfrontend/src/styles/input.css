@@ -1,22 +1,22 @@
 .input-container {
 	display: flex;
 }
-  
+
 .input-container input {
 	flex-grow: 1;
 }
-  
+
 .input-container :not(:last-child) {
 	margin-right: 10px;
 }
-  
+
 input {
 	border-radius: 0;
 	border: 2px solid #0b3c3c;
 	padding: 10px;
 	font-size: 16px;
 }
-  
+
 button {
 	background-color: #0b3c3c;
 	color: white;
@@ -25,4 +25,13 @@ button {
 	padding: 10px;
 	font-size: 16px;
 	font-weight: bold;
+	min-width: 90px;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+button.delete {
+	background-color: darkred;
 }

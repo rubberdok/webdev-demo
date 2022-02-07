@@ -31,10 +31,22 @@ export default function TodoPage({ setError }) {
 		setTodos(newTodos);
 	}
 
+	function removeTodo(removedTodo) {
+		const newTodos = [];
+
+		for (const oldTodo of todos) {
+			if (oldTodo.id !== removedTodo.id) {
+				newTodos.push(oldTodo);
+			}
+		}
+
+		setTodos(newTodos);
+	}
+
 	return (
 		<div className="content">
 			<TodoInput addTodo={addTodo} setError={setError} />
-			<TodoList todos={todos} />
+			<TodoList todos={todos} removeTodo={removeTodo} />
 		</div>
 	);
 }

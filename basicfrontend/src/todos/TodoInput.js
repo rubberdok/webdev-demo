@@ -8,7 +8,7 @@ export default function TodoInput({ addTodo, setError }) {
 		setText(event.target.value);
 	}
 
-	async function handleClick() {
+	async function handleAdd() {
 		const response = await postTodo({ text: text });
 		if (response.ok) {
 			addTodo(response.todo);
@@ -23,7 +23,7 @@ export default function TodoInput({ addTodo, setError }) {
 	return (
 		<div className="input-container">
 			<input type="text" value={text} onChange={handleTextChange} />
-			<button onClick={handleClick}>Add todo</button>
+			<button onClick={handleAdd}>Add todo</button>
 		</div>
 	);
 }
