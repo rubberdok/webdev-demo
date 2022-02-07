@@ -24,8 +24,6 @@ func main() {
 	// Migrate the model schema to the database
 	database.AutoMigrate(&Todo{})
 
-	database.Create(&Todo{Text: "test todo"})
-
 	// Set up endpoint for getting todos
 	HandleGetRequest("/todos", getTodos)
 
