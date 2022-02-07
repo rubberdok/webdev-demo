@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 
 	//lint:ignore ST1001 Using dot import to simplify example
@@ -76,8 +75,11 @@ func createTodo(response http.ResponseWriter, request *http.Request) {
 	// SQL equivalent: INSERT INTO todos VALUES ([newTodo.ID], [newTodo.Text]);
 	database.Create(&newTodo)
 
-	// Respond to request
-	response.Write([]byte("Todo created."))
+	// Convert the new todo to JSON format
+	jsonTodo, _ := json.Marshal(&newTodo)
+
+	// Send the newly created todo back
+	response.Write(jsonTodo)
 }
 
 // Handler for the /deleteTodo endpoint, which lets users delete todos.
@@ -98,6 +100,9 @@ func deleteTodo(response http.ResponseWriter, request *http.Request) {
 	// SQL equivalnt: DELETE FROM todos WHERE id = [todoToDelete.ID]
 	database.Delete(&todoToDelete)
 
-	// Respond to request
-	response.Write([]byte(fmt.Sprint("Todo with ID", todoToDelete.ID, "deleted")))
+	// Convert the deleted todo to JSON format
+	jsonTodo, _ := json.Marshal(&todoToDelete)
+
+	// Send the deleted todo back for the frontend to handle
+	response.Write(jsonTodo)
 }
