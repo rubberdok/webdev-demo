@@ -12,7 +12,9 @@ export default function TodoList({ todos, removeTodo, setError }) {
 		const response = await deleteTodo({ id: todoId });
 
 		if (response.ok) {
-			removeTodo(response.todo);
+			removeTodo(response.content);
+
+			// Reset the error on success
 			setError(undefined);
 		} else {
 			setError(response.error);

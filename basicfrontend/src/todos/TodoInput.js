@@ -18,7 +18,7 @@ export default function TodoInput({ addTodo, setError }) {
 		const response = await postTodo({ text: text });
 
 		if (response.ok) {
-			addTodo(response.todo);
+			addTodo(response.content);
 
 			// Reset the error on success
 			setError(undefined);

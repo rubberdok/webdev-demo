@@ -17,7 +17,7 @@ export default function TodoPage({ setError }) {
 			const response = await fetchTodos();
 
 			if (response.ok) {
-				setTodos(response.todos);
+				setTodos(response.content);
 
 				// Reset the error on success
 				setError(undefined);
