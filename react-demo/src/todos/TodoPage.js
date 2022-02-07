@@ -21,7 +21,7 @@ export default function TodoPage() {
 		<>
 			<h1>Todo List</h1>
 			<TodoInput addTodo={addTodo} />
-			<TodoList todos={"not an array!"} />
+			<TodoList todos={todos} />
 		</>
 	);
 }
