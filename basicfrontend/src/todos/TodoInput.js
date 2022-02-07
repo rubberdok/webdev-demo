@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { postTodo } from "./api";
 
+/**
+ * Displays an input field and a button for creating todos.
+ * Calls the given addTodo function on successful createTodo request,
+ * or the given setError function on failure.
+ */
 export default function TodoInput({ addTodo, setError }) {
 	const [text, setText] = useState("");
 
@@ -9,15 +14,20 @@ export default function TodoInput({ addTodo, setError }) {
 	}
 
 	async function handleAdd() {
+		// Send a request to the backend to create the todo
 		const response = await postTodo({ text: text });
+
 		if (response.ok) {
 			addTodo(response.todo);
+
+			// Reset the error on success
 			setError(undefined);
-			setText("");
 		} else {
 			setError(response.error);
-			setText("");
 		}
+
+		// Reset the text input field
+		setText("");
 	}
 
 	return (
