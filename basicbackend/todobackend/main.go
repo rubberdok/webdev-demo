@@ -6,7 +6,7 @@ import (
 	"net/http"
 
 	//lint:ignore ST1001 Using dot import to simplify example
-	. "github.com/rubberdok/webdev-demo/backend-demo/basicbackend"
+	. "github.com/rubberdok/webdev-demo/basicbackend"
 	"gorm.io/gorm"
 )
 

@@ -1,4 +1,4 @@
-module github.com/rubberdok/webdev-demo/backend-demo/basicbackend
+module github.com/rubberdok/webdev-demo/basicbackend
 
 go 1.17
 
