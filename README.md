@@ -49,3 +49,5 @@ If you have any trouble with the preparation, please [file an issue](https://git
 
 - `slide_examples` contains the files used for the code examples in the crash course slides.
 - `react-demo` contains a simple React todo list app used for the interactive demo.
+- `basicbackend` contains a simple example backend todo app, written in [Go](https://go.dev/).
+- `basicfrontend` contains a re-implementation of the todo list app from `react-demo`, but this time using the API from `basicbackend` to save todos.
