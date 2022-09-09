@@ -1,5 +1,5 @@
-import TodoPage from "./todos/TodoPage";
+import { TodoPage } from "./todos/TodoPage";
 
 export default function App() {
-	return <TodoPage />;
+  return <TodoPage />;
 }

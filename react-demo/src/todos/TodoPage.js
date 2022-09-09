@@ -1,27 +1,27 @@
 import { useState } from "react";
-import TodoList from "./TodoList";
-import TodoInput from "./TodoInput";
+import { TodoList } from "./TodoList";
+import { TodoInput } from "./TodoInput";
 
-export default function TodoPage() {
-	const [todos, setTodos] = useState([]);
+export const TodoPage = () => {
+  const [todos, setTodos] = useState([]);
 
-	function addTodo(newTodo) {
-		const newTodos = [];
+  const addTodo = (newTodo) => {
+    const newTodos = [];
 
-		for (const oldTodo of todos) {
-			newTodos.push(oldTodo);
-		}
+    for (const oldTodo of todos) {
+      newTodos.push(oldTodo);
+    }
 
-		newTodos.push(newTodo);
+    newTodos.push(newTodo);
 
-		setTodos(newTodos);
-	}
+    setTodos(newTodos);
+  };
 
-	return (
-		<>
-			<h1>Todo List</h1>
-			<TodoInput addTodo={addTodo} />
-			<TodoList todos={todos} />
-		</>
-	);
-}
+  return (
+    <>
+      <h1>Todo List</h1>
+      <TodoInput addTodo={addTodo} />
+      <TodoList todos={todos} />
+    </>
+  );
+};

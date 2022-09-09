@@ -1,9 +1,9 @@
-export default function TodoList({ todos }) {
-	return (
-		<ul>
-			{todos.map((todo) => (
-				<li>{todo}</li>
-			))}
-		</ul>
-	);
-}
+export const TodoList = ({ todos }) => {
+  return (
+    <ul>
+      {todos.map((todo) => (
+        <li>{todo}</li>
+      ))}
+    </ul>
+  );
+};
