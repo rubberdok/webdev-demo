@@ -1,12 +1,12 @@
 import "./App.css";
 import { useState } from "react";
 
-function App() {
+const App = () => {
   const [header, setHeader] = useState("Welcome!");
 
-  function setGoodbye() {
+  const setGoodbye = () => {
     setHeader("Goodbye!");
-  }
+  };
 
   return (
     <>
@@ -16,6 +16,6 @@ function App() {
       </button>
     </>
   );
-}
+};
 
 export default App;
