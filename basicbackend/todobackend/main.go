@@ -95,7 +95,7 @@ func deleteTodo(response http.ResponseWriter, request *http.Request) {
 	}
 
 	// Delete the todo with the ID given in request
-	// SQL equivalnt: DELETE FROM todos WHERE id = [todoToDelete.ID]
+	// SQL equivalent: DELETE FROM todos WHERE id = [todoToDelete.ID]
 	database.Delete(&todoToDelete)
 
 	// Convert the deleted todo to JSON format
