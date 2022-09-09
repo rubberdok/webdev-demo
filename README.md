@@ -15,7 +15,7 @@
 
 ## Preparation
 
-Following these steps prepares you to join the interactive React demo of the crash course. This is not mandatory, but I recommend everyone to do it to maximize their learning.
+Following these steps prepares you to join the interactive React demo of the crash course.
 
 1. Download and install `Node.js` from https://nodejs.org/en/
    - Select the "Recommended For Most Users" option
@@ -51,4 +51,4 @@ If you have any trouble with the preparation, please [file an issue](https://git
 - `basicbackend` contains a simple example backend todo app, written in [Go](https://go.dev/).
 - `basicfrontend` contains a re-implementation of the todo list app from `react-demo`, but this time using the API from `basicbackend` to save todos.
 - `slides.pdf` contains the slides from the crash course presentation.
-- `slide_examples` contains the files used for the code examples in the crash course slides.
+- `slide-examples` contains the files used for the code examples in the crash course slides.
