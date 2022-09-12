@@ -24,7 +24,7 @@ Following these steps prepares you to join the interactive React demo of the cra
    - Windows: `Powershell` / `Command Prompt` / `Windows Terminal`
 3. Open the terminal, and check that Node was installed correctly by typing `npm --version`
    - If `npm` is not recognized, try restarting your computer. If it still does not work, try following [these steps for Windows](https://dev.to/supritha/npm-is-not-recognized-as-internal-or-external-command-solution-o1n), or [these for Mac](https://medium.com/@hayasnc/how-to-install-nodejs-and-npm-on-mac-using-homebrew-b33780287d8f).
-4. Type `npx create-react-app react-demo` in the terminal
+4. Type `npx create-react-app react-demo --template typescript` in the terminal
    - `npx` this time, not `npm`!
    - If prompted to install `create-react-app`, type `y`.
    - This creates a React app called `react-demo`.
