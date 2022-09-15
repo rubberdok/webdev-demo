@@ -45,7 +45,7 @@ Following these steps prepares you to join the interactive demos of the crash co
 
 ### Django demo
 
-1. Download and install Python from https://www.python.org/
+1. Download and install Python from https://www.python.org/ (if you don't already have it)
 2. Find the **terminal** on your computer
    - Mac: `Terminal`
    - Windows: `Powershell` / `Command Prompt` / `Windows Terminal`
@@ -76,6 +76,5 @@ I recommend everyone to install **VSCode** as your code editor:
 
 - `react-demo` contains a simple React todo app used for the interactive demo.
 - `django-demo/backend` contains a simple Django backend for todos, with a GraphQL API using Graphene
-- `django-demo/frontend` builds on the todo app from `react-demo`, connecting to the GraphQL API in `django-demo/backend`
 - `slides.pdf` contains the slides from the crash course presentation.
 - `slide-examples` contains the files used for the code examples in the crash course slides.
