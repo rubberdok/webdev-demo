@@ -13,9 +13,19 @@
   Hosted by <a href="https://github.com/rubberdok"><em>Rubberdøk</em></a>
 </h3>
 
+**Table of Contents**
+
+- [Preparation](#preparation)
+  - [React demo](#react-demo)
+  - [Django demo](#django-demo)
+  - [VSCode](#vscode)
+- [Repo contents](#repo-contents)
+
 ## Preparation
 
-Following these steps prepares you to join the interactive React demo of the crash course.
+Following these steps prepares you to join the interactive demos of the crash course. If you have any trouble with the preparation, please [file an issue](https://github.com/rubberdok/webdev-demo/issues/new).
+
+### React demo
 
 1. Download and install `Node.js` from https://nodejs.org/en/
    - Select the "Recommended For Most Users" option
@@ -33,22 +43,39 @@ Following these steps prepares you to join the interactive React demo of the cra
 6. Type `npm start`
    - After some setup, this should open a browser tab with your app! Now you're all set for the interactive demo.
 
-In addition, I recommend everyone to install **VSCode** as your code editor:
+### Django demo
+
+1. Download and install Python from https://www.python.org/
+2. Find the **terminal** on your computer
+   - Mac: `Terminal`
+   - Windows: `Powershell` / `Command Prompt` / `Windows Terminal`
+3. Open the terminal, and check that Python was installed correctly by typing `python3 --version`
+4. Type `mkdir django-demo` to make a folder for the project
+5. Type `cd django-demo` to move into the folder
+6. Type `pip install Django==3.2.14 graphene-django==2.15.0` to install Django and Graphene
+7. Type `django-admin startproject config .` (don't miss the `.`!) to set up the Django project with a `config` module
+8. Type `python3 manage.py startapp todos` to create a Django app for todos
+9. Type `python3 manage.py runserver` to run the server
+10. Open a new terminal window (and leave the previous one running!)
+11. Type `cd django-demo` again in the new terminal window, to get back to the project
+12. Type `python3 manage.py migrate` to initialize the database
+
+### VSCode
+
+I recommend everyone to install **VSCode** as your code editor:
 
 1. Download and install from https://code.visualstudio.com/
 2. Launch it
 3. Go to `File -> Open Folder`
-4. Find the `react-demo` folder, and double-click it. If you made it from a fresh terminal window earlier, it should be located in:
-   - Mac: `/Users/[your username]/react-demo` (press `Command + Shift + H` and you should see it)
-   - Windows: `C:\Users\[your username]\react-demo`
-5. Now you should see your React app files on the left in VSCode. Next time you open VSCode, you'll enter right into this folder and be ready to join the demo!
+4. Find the `react-demo`/`django-demo` folder (depending on which project you want to open), and double-click it. If you made it from a fresh terminal window earlier, it should be located in:
+   - Mac: `/Users/[your username]/[react-demo/django-demo]` (press `Command + Shift + H` and you should see it)
+   - Windows: `C:\Users\[your username]\[react-demo/django-demo]`
+5. Now you should see your React/Django files on the left in VSCode. Next time you open VSCode, you'll enter right into this folder and be ready to join the demo!
 
-If you have any trouble with the preparation, please [file an issue](https://github.com/rubberdok/webdev-demo/issues/new).
+## Repo contents
 
-## Repo Contents
-
-- `react-demo` contains a simple React todo list app used for the interactive demo.
-- `basicbackend` contains a simple example backend todo app, written in [Go](https://go.dev/).
-- `basicfrontend` contains a re-implementation of the todo list app from `react-demo`, but this time using the API from `basicbackend` to save todos.
+- `react-demo` contains a simple React todo app used for the interactive demo.
+- `django-demo/backend` contains a simple Django backend for todos, with a GraphQL API using Graphene
+- `django-demo/frontend` builds on the todo app from `react-demo`, connecting to the GraphQL API in `django-demo/backend`
 - `slides.pdf` contains the slides from the crash course presentation.
 - `slide-examples` contains the files used for the code examples in the crash course slides.
