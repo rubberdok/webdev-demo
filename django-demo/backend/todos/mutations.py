@@ -3,9 +3,11 @@ import graphene
 from .models import Todo, Author
 from .types import TodoType, AuthorType
 
+
 class CreateTodoInput(graphene.InputObjectType):
     text = graphene.String(required=True)
     author_id = graphene.ID(required=True)
+
 
 class CreateTodo(graphene.Mutation):
     ok = graphene.Boolean()
@@ -16,7 +18,7 @@ class CreateTodo(graphene.Mutation):
 
     def mutate(self, info, todo_data):
         try:
-            author = Author.objects.get(id=todo_data.get("author_id"))
+            Author.objects.get(id=todo_data.get("author_id"))
         except Author.DoesNotExist:
             raise ValueError("Author not found")
 
@@ -27,8 +29,10 @@ class CreateTodo(graphene.Mutation):
 
         return CreateTodo(todo=todo, ok=True)
 
+
 class CreateAuthorInput(graphene.InputObjectType):
     name = graphene.String(required=True)
+
 
 class CreateAuthor(graphene.Mutation):
     ok = graphene.Boolean()

@@ -3,6 +3,7 @@ from .mutations import CreateTodo, CreateAuthor
 from .resolvers import TodoResolvers
 from .types import TodoType, AuthorType
 
+
 class TodoQueries(graphene.ObjectType, TodoResolvers):
     todos = graphene.List(TodoType)
     authors = graphene.List(AuthorType)
