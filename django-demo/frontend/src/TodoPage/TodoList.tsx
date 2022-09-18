@@ -1,14 +1,19 @@
-import { Todo } from "./types";
+import { useQuery } from "@apollo/client";
+import { TodosDocument } from "../generated/graphql";
 
-type Props = {
-  todos: Todo[];
-};
+export const TodoList: React.FC = () => {
+  const { data, loading, error } = useQuery(TodosDocument);
 
-export const TodoList: React.FC<Props> = ({ todos }) => {
+  if (error) return <>Error!</>;
+
+  if (loading) return <>Loading...</>;
+
   return (
     <ul>
-      {todos.map((todo) => (
-        <li>{todo.text}</li>
+      {data?.todos?.map((todo) => (
+        <li>
+          {todo?.text} (by {todo?.author.name})
+        </li>
       ))}
     </ul>
   );

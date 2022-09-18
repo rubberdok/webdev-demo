@@ -1,17 +1,29 @@
+import { useMutation } from "@apollo/client";
+import { CreateAuthorDocument, CreateTodoDocument, TodosDocument } from "../generated/graphql";
 import { useState } from "react";
-import { Todo } from "./types";
 
-type Props = {
-  addTodo: (todo: Todo) => void;
-};
+export const TodoInput: React.FC = () => {
+  const [todoText, setTodoText] = useState("");
+  const [authorName, setAuthorName] = useState("");
 
-export const TodoInput: React.FC<Props> = ({ addTodo }) => {
-  const [text, setText] = useState("");
+  const [createAuthor] = useMutation(CreateAuthorDocument);
+
+  const [createTodo] = useMutation(CreateTodoDocument, { refetchQueries: [TodosDocument] });
+
+  const addTodo = async () => {
+    const result = await createAuthor({ variables: { authorData: { name: authorName } } });
+
+    const author = result?.data?.createAuthor?.author;
+    if (author) {
+      createTodo({ variables: { todoData: { text: todoText, authorId: author.id } } });
+    }
+  };
 
   return (
     <>
-      <input type="text" value={text} onChange={(e) => setText(e.target.value)} />
-      <button onClick={() => addTodo({ text: text })}>Add todo</button>
+      <input type="text" value={authorName} onChange={(e) => setAuthorName(e.target.value)} placeholder="Author" />
+      <input type="text" value={todoText} onChange={(e) => setTodoText(e.target.value)} placeholder="Todo text" />
+      <button onClick={addTodo}>Add todo</button>
     </>
   );
 };
