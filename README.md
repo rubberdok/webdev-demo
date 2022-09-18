@@ -13,6 +13,8 @@
   Hosted by <a href="https://github.com/rubberdok"><em>Rubberdøk</em></a>
 </h3>
 
+Demo repo used in crash course for students learning web development. Contains a basic React frontend and Django backend for creating and showing todos.
+
 **Table of Contents**
 
 - [Preparation](#preparation)
