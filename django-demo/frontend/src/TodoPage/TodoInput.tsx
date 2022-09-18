@@ -7,7 +7,6 @@ export const TodoInput: React.FC = () => {
   const [authorName, setAuthorName] = useState("");
 
   const [createAuthor] = useMutation(CreateAuthorDocument);
-
   const [createTodo] = useMutation(CreateTodoDocument, { refetchQueries: [TodosDocument] });
 
   const addTodo = async () => {

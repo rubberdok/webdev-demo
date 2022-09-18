@@ -4,9 +4,9 @@ import { TodosDocument } from "../generated/graphql";
 export const TodoList: React.FC = () => {
   const { data, loading, error } = useQuery(TodosDocument);
 
-  if (error) return <>Error!</>;
+  if (error) return <div>Error!</div>;
 
-  if (loading) return <>Loading...</>;
+  if (loading) return <div>Loading...</div>;
 
   return (
     <ul>
