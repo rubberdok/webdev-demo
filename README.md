@@ -75,6 +75,7 @@ I recommend everyone to install **VSCode** as your code editor:
 ## Repo contents
 
 - `react-demo` contains a simple React todo app used for the interactive demo.
-- `django-demo/backend` contains a simple Django backend for todos, with a GraphQL API using Graphene
+- `django-demo/backend` contains a simple Django backend for todos, with a GraphQL API using Graphene.
+- `django-demo/frontend` is a copy of `react-demo`, but now connected to the Django backend to fetch and create todos.
 - `slides.pdf` contains the slides from the crash course presentation.
 - `slide-examples` contains the files used for the code examples in the crash course slides.
