@@ -1,0 +1,21 @@
+mutation createTodo($todoData: CreateTodoInput!) {
+  createTodo(todoData: $todoData) {
+    todo {
+      id
+      text
+      author {
+        id
+        name
+      }
+    }
+  }
+}
+
+mutation createAuthor($authorData: CreateAuthorInput!) {
+  createAuthor(authorData: $authorData) {
+    author {
+      id
+      name
+    }
+  }
+}

@@ -1,0 +1,10 @@
+query todos {
+  todos {
+    id
+    text
+    author {
+      id
+      name
+    }
+  }
+}
