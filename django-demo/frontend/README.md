@@ -89,4 +89,4 @@ generates:
 ```
 
 6.  Open a new terminal window/tab, and navigate to `react-demo` (cd `react-demo`)
-7.  Type `npm install`
+7.  Type `npm install` - the frontend should now be ready!
