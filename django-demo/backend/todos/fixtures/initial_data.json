@@ -1,0 +1,32 @@
+[
+  {
+    "model": "todos.author",
+    "pk": 1,
+    "fields": {
+      "name": "Ada Lovelace"
+    }
+  },
+  {
+    "model": "todos.author",
+    "pk": 2,
+    "fields": {
+      "name": "Alan Turing"
+    }
+  },
+  {
+    "model": "todos.todo",
+    "pk": 1,
+    "fields": {
+      "text": "Learn Django",
+      "author": 1
+    }
+  },
+  {
+    "model": "todos.todo",
+    "pk": 2,
+    "fields": {
+      "text": "Build a GraphQL API",
+      "author": 2
+    }
+  }
+]
