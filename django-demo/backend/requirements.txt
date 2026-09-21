@@ -1,3 +1,4 @@
-Django==3.2.14
-graphene-django==2.15.0
-django-cors-headers==3.13.0
+Django==3.2.25 # Change to 5.2.6 if using python 3.14 or later.
+graphene-django==3.2.3
+graphene==3.4.3
+django-cors-headers==4.5.0

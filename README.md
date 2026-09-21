@@ -47,16 +47,23 @@ Following these steps prepares you to join the interactive demos of the crash co
 2. Find the **terminal** on your computer
    - Mac: `Terminal`
    - Windows: `Powershell` / `Command Prompt` / `Windows Terminal`
-3. Open the terminal, and check that Python was installed correctly by typing `python3 --version`
-4. Type `mkdir django-demo` to make a folder for the project
-5. Type `cd django-demo` to move into the folder
-6. Type `pip install Django==3.2.14 graphene-django==2.15.0` to install Django and Graphene
-7. Type `django-admin startproject config .` (don't miss the `.`!) to set up the Django project with a `config` module
-8. Type `python3 manage.py startapp todos` to create a Django app for todos
-9. Type `python3 manage.py runserver` to run the server
-10. Open a new terminal window (and leave the previous one running!)
-11. Type `cd django-demo` again in the new terminal window, to get back to the project
-12. Type `python3 manage.py migrate` to initialize the database
+   - VSCode: `Terminal` (in the top bar) -> `New Terminal`
+3. Install Python 3.9 or 3.10, then check that it was installed correctly with `python --version`
+   - If using Python 3.14 or later, please change the `django-demo/backend/requirements.txt` Django version as described by comment.
+4. Open the repository folder in the terminal and type `cd django-demo/backend`
+5. Create a virtual environment with `python -m venv .venv`
+6. Activate the virtual environment:
+   - Windows PowerShell: `.\.venv\Scripts\Activate.ps1`
+   - Mac/Linux: `source .venv/bin/activate`
+7. Type `pip install -r requirements.txt` to install Django and the backend dependencies
+8. Type `python manage.py migrate` to initialize the database
+9. Type `python manage.py loaddata initial_data` to load example authors and todos
+10. Type `python manage.py createsuperuser` to create an account for the Django admin
+11. Type `python manage.py runserver` to run the backend at `http://localhost:8000`
+12. Open a new terminal window (and leave the previous one running!)
+13. Move to the frontend with `cd django-demo/frontend`
+14. Type `npm install` to install the frontend dependencies
+15. Type `npm start` to run the frontend at `http://localhost:3000`
 
 ### VSCode
 
