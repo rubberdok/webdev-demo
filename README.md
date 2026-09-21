@@ -36,12 +36,8 @@ Following these steps prepares you to join the interactive demos of the crash co
    - Windows: `Powershell` / `Command Prompt` / `Windows Terminal`
 3. Open the terminal, and check that Node was installed correctly by typing `npm --version`
    - If `npm` is not recognized, try restarting your computer. If it still does not work, try following [these steps for Windows](https://dev.to/supritha/npm-is-not-recognized-as-internal-or-external-command-solution-o1n), or [these for Mac](https://medium.com/@hayasnc/how-to-install-nodejs-and-npm-on-mac-using-homebrew-b33780287d8f).
-4. Type `npx create-react-app react-demo --template typescript` in the terminal
-   - `npx` this time, not `npm`!
-   - If prompted to install `create-react-app`, type `y`.
-   - This creates a React app called `react-demo`.
-   - If you're on a Mac, you may be prompted to install _Command Line Developer Tools_. Do it!
-5. Type `cd react-demo` to move to the new `react-demo` subfolder
+4. Open the repository folder in the terminal and type `cd react-demo`
+5. Type `npm install` to install the project's dependencies
 6. Type `npm start`
    - After some setup, this should open a browser tab with your app! Now you're all set for the interactive demo.
 
