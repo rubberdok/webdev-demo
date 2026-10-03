@@ -1,4 +1,5 @@
-Django==3.2.25 # Change to 5.2.6 if using python 3.14 or later.
+Django==3.2.25; python_version < "3.14"
+Django==5.2.6; python_version >= "3.14"
 graphene-django==3.2.3
 graphene==3.4.3
 django-cors-headers==4.5.0

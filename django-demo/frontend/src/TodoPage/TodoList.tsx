@@ -11,7 +11,7 @@ export const TodoList: React.FC = () => {
   return (
     <ul>
       {data?.todos?.map((todo) => (
-        <li>
+        <li key={todo?.id}>
           {todo?.text} (by {todo?.author.name})
         </li>
       ))}
